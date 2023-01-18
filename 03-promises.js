@@ -16,13 +16,12 @@ function getPosts() {
 function createPost(newPost) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            post.push(newPost)
-
-            const error = false
+            const error = true
             if (!error) {
-                resolve()
+                post.push(newPost)
+                resolve('Post created!') //return
             } else {
-                reject('No se pudo resolver la promesa')
+                reject('No se pudo resolver la promesa')  //return
             }
         }, 2000)
     })
@@ -30,3 +29,4 @@ function createPost(newPost) {
 
 createPost({title: 'Post Three', body: 'This is post Three'})
     .then(getPosts)
+    .catch(result => console.log(result))
