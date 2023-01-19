@@ -5,12 +5,15 @@ const sumar = (num1, num2) => {
     })
 }
 
-async function calculos() {
+async function operaciones() {
     try {
-        console.log(await sumar(0, 4))
+        console.log(await sumar(5, 0))
+        // console.log(await restar(5, 0))
+        // console.log(await dividir(5, 0))
+        // console.log(await multiplicar(5, 0))
     } catch(err) {
         console.log(err)
     }
 }
 
-calculos()
+operaciones()
