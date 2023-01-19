@@ -9,8 +9,18 @@ const dividir = (num1, num2) => {
 //     .then(resultado => console.log(resultado))
 //     .catch(err => console.log(err))
 
-dividir(40, 0)
-    .then(resultado => console.log(resultado))
-    .catch(err => console.log(err))
+// dividir(40, 0)
+//     .then(resultado => console.log(resultado))
+//     .catch(err => console.log(err))
 
-console.log('fin del programa')
+const funcAsync = async() => {
+    try {
+        resultado = await dividir(3, 0)
+        console.log(resultado)
+        console.log('fin del programa')
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+funcAsync()
